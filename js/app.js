@@ -86,8 +86,8 @@
     }
   }, true)
   
-})();
-
+});
+console.log(select)
 
 
 
