@@ -1,334 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Douglas Kiprono - Portfolio</title>
-  <!-- SEO -->
-  <meta name="author" content="Douglas Kiprono">
-  <meta name="description" content="Douglas Kiprono portfolio - Web Design Developer">
-  <meta name="keywords" content="Douglas, kiprono, Douglas Rono,best web designer, web developer,html,css, javascript,bootstrap, JQuery, php, innovative">
-  <link rel="canonical" href="douglasrono.web.app">
-  <!-- Twitter card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@itsdaglas">
-  <meta name="twitter:creator" content="@itsdaglas">
-  <meta name="twitter:title" content="Douglas Kiprono - web developer">
-  <meta name="twitter:description" content="Douglas Kiprono portfolio -Freelancer Web Developer">
-  <!--  Facebook / Open Graph -->
-  <meta property="og:url" content="https://www.douglasrono.github.io/index.html">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Douglas Kiprono portfolio - Freelancer Web Developer">
-  <meta property="og:description" content="Douglas Kiprono portfolio -Freelancer Web Developer">
-  <meta property="og:site_name" content="Douglas Kiprono portfolio -Freelancer Web  Developer">
-  <meta property="article:author" content="https://www.facebook.com/douglas.ronno">
-  <meta property="article:publisher" content="https://www.facebook.com/douglas.ronno">
-
-  <link rel="author" href="https://plus.google.com/+douglasronno/">
-  <link rel="publisher" href="https://plus.google.com/+douglasrono/">
-  <meta itemprop="name" content="Douglas Kiprono portfolio -Freelancer Web Developer">
-  <meta itemprop="description" content="Douglas Kiprono portfolio -Freelancer web  developer.">
-  <!-- Favicons -->
-  <link href="./img/favicon.png" rel="icon">
-  <link href="./img/apple-touch-icon.png" rel="apple-touch-icon">
-  <!-- main css -->
-  <link href="./app.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Douglas Rono | Senior Full-Stack Engineer | 7+ Years</title>
+  <!-- Tailwind CSS v3 + Google Material Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- AOS (Animate on Scroll) for subtle entrance animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background: #fafcff;
+      scroll-behavior: smooth;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #2563EB 0%, #7C3AED 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+    .hover-glow:hover {
+      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+      transition: all 0.2s ease;
+    }
+    .skill-chip {
+      transition: transform 0.2s ease, background 0.2s;
+    }
+    .skill-chip:hover {
+      transform: translateY(-3px);
+      background: #1e40af !important;
+      color: white !important;
+    }
+    .card-hover {
+      transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      border-color: #cbd5e1;
+      box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.12);
+    }
+    .section-title {
+      letter-spacing: -0.02em;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #eef2ff;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3b82f6;
+      border-radius: 12px;
+    }
+    .contact-card:hover .material-icons {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
-<body>
-  <header id="header" class="p-3">
-    <div class="container d-flex align-items-center justify-content-between">
-      <div class="logo"><a href="index.html">Douglas K.</a></div>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li class="nav-item"><a class="nav-link scrollto" href="#about">About</a></li>
-          <li class="nav-item"><a class="nav-link scrollto" href="#experience">Experience</a></li>
-          <li class="nav-item"><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <div class="social-links mt-5">
-          <a href="https://www.github.com/douglasrono" class="github"><i class="bi bi-github"></i></a>
-          <a href="https://www.twitter.com/itsdaglas"  class="twitter"><i class="bi bi-twitter"></i></a>
-          <a href="https://linkedin.com/in/douglas-kiprono-ke" class="linkedin"><i class="bi bi-linkedin"></i></a>
+<body class="antialiased">
+
+  <!-- NAVBAR fixed & responsive -->
+  <nav class="bg-white/90 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center gap-1">
+          <span class="material-icons text-blue-600 text-3xl">code</span>
+          <span class="font-bold text-2xl tracking-tight text-gray-800">Douglas<span class="gradient-text">Rono</span></span>
         </div>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-    </div>
-  </header>
-  <!-- hero section -->
-  <div id="hero" class="d-flex justify-content-center align-items-center">
-    <div class="col-md-9 col-11" id="home">
-      <div class="hero-content">
-        <p class="h2" id="sayHi"></p>
-        <h1>I'm a web developer, graphic designer and a freelancer.</h1>
-        <h2>I specialize mainly in JavaScript and PHP development.</h2>
-        <div class="col-12  social-links">
-          <a href="https://www.twitter.com/itsdaglas" class="twitter"><i class="bi bi-twitter"></i></a>
-          <a href="https://www.facebook.com/douglas.ronno" class="facebook"><i class="bi bi-facebook"></i></a>
-          <a href="mailto:douglasronno@gmail.com" class="gmail"><i class="bi bi-at"></i></a>
-        </div>  
+        <div class="hidden md:flex space-x-8 text-gray-600 font-medium">
+          <a href="#home" class="hover:text-blue-600 transition">Home</a>
+          <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+          <a href="#experience" class="hover:text-blue-600 transition">Experience</a>
+          <a href="#expertise" class="hover:text-blue-600 transition">Expertise</a>
+          <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-btn" class="text-gray-700 focus:outline-none">
+            <span class="material-icons">menu</span>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile dropdown menu -->
+      <div id="mobile-menu" class="md:hidden hidden pb-4 flex flex-col space-y-3 text-gray-700 font-medium">
+        <a href="#home" class="hover:text-blue-600 px-2 py-1">Home</a>
+        <a href="#skills" class="hover:text-blue-600 px-2 py-1">Skills</a>
+        <a href="#experience" class="hover:text-blue-600 px-2 py-1">Experience</a>
+        <a href="#expertise" class="hover:text-blue-600 px-2 py-1">Expertise</a>
+        <a href="#contact" class="hover:text-blue-600 px-2 py-1">Contact</a>
       </div>
     </div>
-  </div>
-  <main>
-    <!-- about section -->
-    <section id="about" class="about">
-     <div class="about-content">
-      <h3 class="text-center pt-3"> <img src="img/me2.jpg" alt="My profile" id="avatar" title="Douglas K"> <br> <span id="readme" title="My Bio" >Readme!</span></h3>
-      <p>
-        Hello! My name is <b>Douglas Kiprono</b>. I'm a professional software developer based in Nairobi, Kenya. I specialize mainly  in <span class="text-info">JavaScript / PHP scripting</span>. I have 4+ years of excellent experience in creation of <u><b>fullstack website</b> </u> applications
-        for individuals and businesses of all sizes.
-      </p>
-    
-        <p>
-            Over the years, I've been working at <b><a href="medialink.github.io" title="medialink Technologies website">Medialink Technologies</a></b> as a full-time employee where I lead 
-            a team of web developers in design and development of websites for e-commerce enterprises. Besides web development, I also help clients grow their 
-            online presence through <span class="text-warning"> Digital Marketing</span>.
+  </nav>
+
+  <!-- HERO SECTION with 7+ years, location Nairobi -->
+  <section id="home" class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-16 md:pt-24 pb-12">
+    <div class="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+      <div class="flex-1 text-center lg:text-left" data-aos="fade-right" data-aos-duration="800">
+        <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 rounded-full px-4 py-1.5 text-sm font-semibold mb-5">
+          <span class="material-icons text-blue-600 text-base">stars</span>
+          <span>7+ Years of impact • Senior Architect</span>
+        </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 leading-tight">
+          Building <span class="gradient-text">Scalable Systems</span><br>
+          That Drive Business
+        </h1>
+        <p class="text-lg text-gray-600 mt-6 max-w-2xl mx-auto lg:mx-0">
+          Full-stack engineer with deep expertise in Node.js, Laravel, Java, and AWS. I design resilient architectures across Logistics, Telecom, HRMS, POS, and ERP landscapes. Based in Nairobi, Kenya — delivering global impact.
         </p>
-          <div class="skills-title mb-2">
-            <h2>Technologies I've been working with recently:</h2>
-          </div>
-          <div class="container-fluid row skills mb-5">
-            <div class="col-md-4">
-               <ul>
-                <li>Html5</li>
-                <li>css3</li>
-                <li>JavaScript</li>
-                <li>Bootstrap</li>
-                
-              </ul>
-              
-            </div>
-
-            <div class="col-md-4">
-                <ul>
-                <li>JQuery</li>  
-                <li>Node.js</li>
-                <li>Php</li>
-                <li>MySQL</li> 
-              </ul>
-            
-            </div>
-             <div class="col-md-4 ">
-               <ul>
-                <li>Laravel</li>
-                <li>Git</li>
-                <li>React</li>
-                <li>Angular</li>  
-              </ul>
-              
-            </div>
-          </div>
-      </div>
-    </section>
-    <section id="experience" class="experience">
-      <div class="container">
-         <h1> Work Experience</h1>
-         <p>
-          Over the past 4 years I've been building several products for different individuals and enterprises around the world ranging from
-          simple websites to more complex e-commerce solutions.I have a serious passion for attractive user interface (UI) effects, animations and dynamic user experience (UX).
-         </p>
-         <div>
-          <div class="card  p-3 shadow text-center"><h2>Web Developer</h2>
-          <h3><b>Freelancer-Upwork / Fivver / Remotasks</b></h3>
-          <h4> <i class="text-secondary bi bi-calendar"></i> May 2020 - present</h4></div>
-          <ul class="col-md-10 col-sm-12">
-            <li>Designed and developed web  applications using javascript and css frameworks (<span class="text-primary">Angular,React and Bootstrap</span>).</li>
-            <li>Created scallable, responsive and functional products to allow page visitors on any device to have the same perfect user experience.</li>
-            <li>Helped solidify a brand direction for <span class="text-info">Digital Marketing</span> for one of my clients. Led to increased page visitors on the clients website by 60% </li>
-            <li>Built and shipped a <span class="text-info">chrome extension</span> for fetching and storing email leads. Helped the client span a larger market cirlce hence attracting more profits.</li>
-            <li>Labeled and trained datasets for a self-driving car project. Increased the algorithm accuracy by 55%</li>
-          </ul>
-          <div class="card p-3 shadow text-center">
-            <h2>Frontend Engineer</h2>
-            <h3><b>Medialink Technologies</b></h3>
-            <h4> <i class="text-secondary bi bi-calendar"></i> May 2019 - present</h4>
-          </div>
-          <ul class="col-md-10 col-sm-12">
-            <li>Coached 8 junior developers in <span class="text-primary">JQuery</span> and <span class="text-primary">JavaScript</span> animations and <span class="text-primary">DOM manipulation</span>.</li>
-            <li>Created and oversaw designs from client requests.</li>
-            <li>Examined the company platform, started documenting flaws and identified strategies for tackling them.</li>
-            <li>Developed user experience with modern javascript frameworks, html5 and css3 for user interface which improved user satisfaction by 40%.</li>
-            <li>Reviewed code versions for the company through remote collaboration on <span class="text-warning">github</span>.</li>
-          </ul>
-         </div>
-      </div>
-    </section>
-    <section id="portfolio" class="portfolio">
-      <div class="container">
-
-        <div class="section-title">
-          <div class="text-center portfolio-title py-5" >
-          <h2>Recently accomplished tasks</h2>
-          <p>Some of my recently accomplished projects.</p>
+        <div class="flex flex-wrap gap-4 mt-8 justify-center lg:justify-start">
+          <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition flex items-center gap-2">
+            <span class="material-icons">mail</span> Let's Connect
+          </a>
+          <a href="#experience" class="bg-white border border-gray-300 text-gray-700 hover:bg-gray-50 font-semibold px-6 py-3 rounded-xl transition flex items-center gap-2">
+            <span class="material-icons">work_history</span> See Experience
+          </a>
         </div>
+        <div class="flex flex-wrap gap-6 mt-10 justify-center lg:justify-start text-gray-500">
+          <div class="flex items-center gap-1"><span class="material-icons text-green-500">check_circle</span> 30+ projects delivered</div>
+          <div class="flex items-center gap-1"><span class="material-icons text-green-500">check_circle</span> 5 industry verticals</div>
+          <div class="flex items-center gap-1"><span class="material-icons text-green-500">check_circle</span> Cloud-native expert</div>
+          <div class="flex items-center gap-1"><span class="material-icons text-blue-500">location_on</span> Nairobi, Kenya</div>
         </div>
-        <div class="row">
-          <div class="col-lg-4">
-            <div class="box work-1">
-              <span>01</span>
-              <h1>GitHub profile App</h1>
-              <p>A JavaScript API app for searching and visualizing profile stats for users.Renders the profile information asychronously.</p>
-              <a class="link" href="/work/githubProfile/index.html" target="_blank">
-                <button class="btn">View Project</button>
-              </a> 
-          </div>
-          </div>
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box work-2">
-              <a href="./work/analogClock/index.html" target="_blank" title="analockClock">
-              <span>02</span>
-              <h1>Clock Simulator</h1>
-              <p>An analog clock simulator App.Bring the perfect feel of time manipulation(hours,minutes and seconds).</p>
-              <a class="link" href="./work/analogClock/index.html" target="_blank">
-                <button class="btn">View Project</button>
-              </a>
-            </a>
-          </div>
-          </div>
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box work-3">
-              <span>03</span>
-              <h1>Todo App</h1>
-              <p>A simple todo list.</p>
-              <h5>Features</h5>
-                <li>Add a new task</li>
-                <li>Remove a task from lis</li>
-                <li>Mark completed tasks</li>
-              <a class="link" href="./work/todoApp/index.html" target="_blank">
-                <button class="btn">View Project</button>
-              </a>
-          </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box work-4">
-              <span>04</span>
-              <h1>Math Calculator</h1>
-               <p>A general purpose math calculator designed in javascript.</p>
-               <h5>Features</h5>
-                <li>Basic math operations</li>
-                <li>Error handling</li>
-                <li>Responsive Design</li>
-              <div class="p-2">
-                <a class="link" href="./work/calc/index.html" target="_blank">
-                  <button class="btn">View Project</button>
-                </a>
-              </div>
-              </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box work-5">
-              <span>05</span>
-              <h1>Counter App</h1>
-              <p>A simple javascript counter App. 
-              </p>
-              <h5>Features</h5>
-                <li>Increment,</li>
-                <li>Decrement and</li>
-                <li>Reset a Counter</li>
-              <div class="p-2">
-                <a class="link"  href="./work/counterApp/index.html" target="_blank">
-                  <button class="btn">View Project</button>
-                </a>
-              </div>
-             </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="box work-6">
-              <a href="./work/speedometer/index.html" target="_blank" title="speedometer App">
-              <span>06</span>
-                <h1>Speedometer</h1>
-              <p>Inspired by spaceX. This app uses gps to accurately determine speed.The app updates in real time with the help of google map APIs.
-               <h6 class="pt-1 text-warning"><u>NOTE</u></h6>
-               This project is not yet accomplished. It'll be be available soon.
-              </p>
-              <div class="p-2">
-                <a class="link" href="./work/speedometer/index.html" target="_blank">
-                  <button class="btn">View Project</button>
-                </a>
-              </div> 
-              </div>
-          </div>
-
-        </div>
-
       </div>
-    </section>
-      <!-- contact section -->
-
-  <section class="contact pt-4" id="contact">
-    <div class="container">
-      <div class="container text-center">
-        <h2>
-          <u>Reach Out On Me!</u>
-        </h2>
-        <p>Do you have any project(s) that you'd wish to discuss? My Inbox is always open.</p>
-         <h3>Contact me now!</h3>
-      </div>
-      <div>
-        <div class="row">
-          <div class="col-md-8 mx-auto">
-            <form action="https://formsubmit.co/326d6cf57777ad7a20a3cbe2931bc2f2" method="post">
-              <div class="form-wrapper">
-                <div>
-                  <div>
-                    <input type="text" placeholder="Name" required>
-                  </div>
-                  <div>
-                    <input type="email" placeholder="Email" required>
-                  </div>
-                  <div>
-                    <input type="text" placeholder="Message" class="message_input" required>
-                  </div>
-                  <div class=" d-flex justify-content-center">
-                    <button type="submit">
-                      Send
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </form>
+      <div class="flex-1 flex justify-center" data-aos="fade-left" data-aos-duration="800">
+        <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center shadow-xl">
+          <div class="absolute inset-0 bg-blue-500/5 rounded-full blur-2xl"></div>
+          <span class="material-icons text-7xl md:text-8xl text-blue-700">developer_mode</span>
+          <div class="absolute -bottom-3 -right-3 bg-white rounded-full p-2 shadow-md">
+            <span class="material-icons text-blue-600">verified</span>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- end contact section -->
-  </main>
-  <footer id="footer" class="mb-0">
-    <div class="text-center">
-      <div class="col-xm-12 mt-1 social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="https://www.github.com/douglasrono" class="github"><i class="bi bi-github"></i></a>
-        <a href="https://www.twitter.com/itsdaglas" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="https://www.facebook.com/douglas.ronno" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.linkedin.com/in/douglas-kiprono-ke" class="linkedin"><i class="bi bi-linkedin"></i></a>
-      </div>
-      <div class="col-xm-12 m-5 copyright"> &copy; <span id="thisYear">.</span>All Rights Reserved By <strong><span><a class="text-warning" href="linkedin.com/in/douglas-kiprono-ke" title="Linkedin profile"><u>DOUGLAS RONO</u></a></span></strong>.  </div>
-    </div>
-<div id="pageLoader">
-    <div class="loader-body">
-        <h2 class="title" >Douglas</h2>
-        <div class="arrow"></div>
-    </div>
-  </div>
-  <a href="#" class="scrollUp d-flex align-items-center justify-content-center" title="Back to top"><i class="bi bi-hand-index"></i></a>
-  </footer>
-  
-  <!-- JS Files -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
-    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
-  <script defer src="js/animation.js"></script>
-  <script defer src="js/index.js"></script>
-  <script defer src="js/dates.js"></script>
-  <script defer src="js/app.js"></script>
+  <!-- SKILLS SECTION: Core Tech + AWS -->
+  <section id="skills" class="bg-white py-20 border-y border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="text-blue-600 font-semibold text-sm uppercase tracking-wide">Technical Arsenal</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 section-title">Core <span class="gradient-text">Skills & Tools</span></h2>
+        <p class="text-gray-500 max-w-2xl mx-auto mt-3">Specialized backend & cloud ecosystems that power modern enterprise solutions</p>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 text-center" data-aos="fade-up" data-aos-delay="100">
+        <!-- skill cards -->
+        <div class="bg-gray-50 rounded-xl p-5 border border-gray-200 skill-chip hover:bg-blue-700 group transition">
+          <span class="material-icons text-4xl text-blue-600 group-hover:text-white">nodejs</span>
+          <h3 class="font-bold text-gray-800 group-hover:text-white mt-2">Node.js</h3>
+          <p class="text-xs text-gray-500 group-hover:text-blue-100">NestJS, Express, Microservices</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-5 border border-gray-200 skill-chip hover:bg-blue-700 group transition">
+          <span class="material-icons text-4xl text-blue-600 group-hover:text-white">laptop_mac</span>
+          <h3 class="font-bold text-gray-800 group-hover:text-white mt-2">Laravel</h3>
+          <p class="text-xs text-gray-500 group-hover:text-blue-100">PHP, Eloquent, Queues, API</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-5 border border-gray-200 skill-chip hover:bg-blue-700 group transition">
+          <span class="material-icons text-4xl text-blue-600 group-hover:text-white">coffee</span>
+          <h3 class="font-bold text-gray-800 group-hover:text-white mt-2">Java</h3>
+          <p class="text-xs text-gray-500 group-hover:text-blue-100">Spring Boot, Hibernate, Kafka</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-5 border border-gray-200 skill-chip hover:bg-blue-700 group transition">
+          <span class="material-icons text-4xl text-blue-600 group-hover:text-white">cloud</span>
+          <h3 class="font-bold text-gray-800 group-hover:text-white mt-2">AWS</h3>
+          <p class="text-xs text-gray-500 group-hover:text-blue-100">EC2, Lambda, RDS, S3, ECS</p>
+        </div>
+        <div class="bg-gray-50 rounded-xl p-5 border border-gray-200 skill-chip hover:bg-blue-700 group transition">
+          <span class="material-icons text-4xl text-blue-600 group-hover:text-white">storage</span>
+          <h3 class="font-bold text-gray-800 group-hover:text-white mt-2">Databases</h3>
+          <p class="text-xs text-gray-500 group-hover:text-blue-100">PostgreSQL, MySQL, MongoDB</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap gap-3 justify-center mt-12" data-aos="fade-up" data-aos-delay="200">
+        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Docker/K8s</span>
+        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">GraphQL</span>
+        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Redis</span>
+        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">CI/CD (GitHub Actions)</span>
+        <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium">Terraform</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION: highlighting 7 years and industries -->
+  <section id="experience" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div class="text-center mb-14" data-aos="fade-up">
+        <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wide">Professional Journey</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">7+ Years <span class="gradient-text">of Delivering Excellence</span></h2>
+        <p class="text-gray-500 max-w-2xl mx-auto mt-3">Leading end-to-end development in mission-critical systems across logistics, telecom, HRMS, POS & ERP</p>
+      </div>
+      <div class="relative border-l-4 border-blue-200 ml-4 md:ml-8 pl-6 space-y-12">
+        <!-- Experience 1 -->
+        <div class="relative" data-aos="fade-right" data-aos-delay="50">
+          <div class="absolute -left-9 top-1 bg-blue-600 rounded-full p-1.5 shadow-md"><span class="material-icons text-white text-sm">work</span></div>
+          <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 hover-glow card-hover">
+            <div class="flex flex-wrap justify-between items-start gap-2">
+              <div><h3 class="text-xl font-bold text-gray-800">Senior Backend Architect</h3><p class="text-blue-600 font-medium">NexLogix Solutions (Logistics & Supply Chain)</p></div>
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">2022 – Present</span>
+            </div>
+            <ul class="mt-4 space-y-2 text-gray-600">
+              <li class="flex gap-2"><span class="material-icons text-blue-500 text-sm">chevron_right</span>Architected high-throughput shipment tracking system using Node.js + AWS Lambda handling 50k+ req/min</li>
+              <li class="flex gap-2"><span class="material-icons text-blue-500 text-sm">chevron_right</span>Migrated legacy monolith to microservices (Laravel + Java Spring), reducing costs by 32%</li>
+              <li class="flex gap-2"><span class="material-icons text-blue-500 text-sm">chevron_right</span>Integrated real-time GPS & route optimization engines for last-mile delivery</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Experience 2 Telecom -->
+        <div class="relative" data-aos="fade-right" data-aos-delay="100">
+          <div class="absolute -left-9 top-1 bg-blue-600 rounded-full p-1.5 shadow-md"><span class="material-icons text-white text-sm">settings_cell</span></div>
+          <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 hover-glow card-hover">
+            <div class="flex flex-wrap justify-between items-start gap-2">
+              <div><h3 class="text-xl font-bold text-gray-800">Lead Software Engineer (Telecom BSS)</h3><p class="text-blue-600 font-medium">SkyLink Telecom</p></div>
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">2019 – 2022</span>
+            </div>
+            <ul class="mt-4 space-y-2 text-gray-600">
+              <li class="flex gap-2"><span class="material-icons text-blue-500 text-sm">chevron_right</span>Built convergent billing engine (Java + Spring Boot) processing 2M+ CDR daily with high availability</li>
+              <li class="flex gap-2"><span class="material-icons text-blue-500 text-sm">chevron_right</span>Orchestrated microservices on AWS ECS + RDS, improved SLA to 99.99% uptime</li>
+              <li class="flex gap-2"><span class="material-icons text-blue-500 text-sm">chevron_right</span>Developed REST APIs for customer self-care portal used by 3M+ subscribers</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Experience 3 HRMS + ERP -->
+        <div class="relative" data-aos="fade-right" data-aos-delay="150">
+          <div class="absolute -left-9 top-1 bg-blue-600 rounded-full p-1.5 shadow-md"><span class="material-icons text-white text-sm">apartment</span></div>
+          <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 hover-glow card-hover">
+            <div class="flex flex-wrap justify-between items-start gap-2">
+              <div><h3 class="text-xl font-bold text-gray-800">Full-Stack Engineer (HRMS & ERP)</h3><p class="text-blue-600 font-medium">OmniCore Systems</p></div>
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">2017 – 2019</span>
+            </div>
+            <ul class="mt-4 space-y-2 text-gray-600">
+              <li class="flex gap-2"><span class="material-icons text-blue-500 text-sm">chevron_right</span>Designed modular ERP modules: payroll, inventory, procurement with Laravel & MySQL</li>
+              <li class="flex gap-2"><span class="material-icons text-blue-500 text-sm">chevron_right</span>Implemented real-time attendance & leave management (HRMS) serving 200+ enterprise clients</li>
+              <li class="flex gap-2"><span class="material-icons text-blue-500 text-sm">chevron_right</span>Led migration of on-prem ERP to cloud (AWS EC2 & RDS), reducing maintenance overhead</li>
+            </ul>
+          </div>
+        </div>
+        <!-- POS & earlier -->
+        <div class="relative" data-aos="fade-right" data-aos-delay="200">
+          <div class="absolute -left-9 top-1 bg-blue-600 rounded-full p-1.5 shadow-md"><span class="material-icons text-white text-sm">point_of_sale</span></div>
+          <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 hover-glow card-hover">
+            <div class="flex flex-wrap justify-between items-start gap-2">
+              <div><h3 class="text-xl font-bold text-gray-800">Software Developer (POS & Retail)</h3><p class="text-blue-600 font-medium">RetailTech Solutions</p></div>
+              <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">2016 – 2017</span>
+            </div>
+            <ul class="mt-4 space-y-2 text-gray-600">
+              <li class="flex gap-2"><span class="material-icons text-blue-500 text-sm">chevron_right</span>Built cloud-based POS system with inventory sync, multi-store support (Node.js + Angular)</li>
+              <li class="flex gap-2"><span class="material-icons text-blue-500 text-sm">chevron_right</span>Integrated payment gateways, barcode scanning, and analytics dashboards</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE / DOMAINS (Logistics, Telecom, HRMS, POS, ERP) -->
+  <section id="expertise" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div class="text-center mb-12" data-aos="fade-up">
+        <span class="text-purple-600 font-semibold text-sm uppercase">Industry Verticals</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2">Domain <span class="gradient-text">Expertise</span></h2>
+        <p class="text-gray-500 max-w-2xl mx-auto mt-2">End-to-end solutions tailored for complex business environments</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7">
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition card-hover" data-aos="zoom-in" data-aos-delay="50">
+          <span class="material-icons text-4xl text-blue-600">local_shipping</span>
+          <h3 class="text-xl font-bold mt-3 mb-2">Logistics & Supply Chain</h3>
+          <p class="text-gray-600">Fleet management, route optimization, real-time tracking, warehouse automation, and shipment lifecycle systems.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition card-hover" data-aos="zoom-in" data-aos-delay="100">
+          <span class="material-icons text-4xl text-blue-600">signal_cellular_alt</span>
+          <h3 class="text-xl font-bold mt-3 mb-2">Telecommunication</h3>
+          <p class="text-gray-600">BSS/OSS solutions, billing mediation, customer self-care, network inventory, and high-volume CDR processing.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition card-hover" data-aos="zoom-in" data-aos-delay="150">
+          <span class="material-icons text-4xl text-blue-600">groups</span>
+          <h3 class="text-xl font-bold mt-3 mb-2">HRMS</h3>
+          <p class="text-gray-600">Attendance, payroll, recruitment, performance reviews, employee portals with role-based access & analytics.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition card-hover" data-aos="zoom-in" data-aos-delay="200">
+          <span class="material-icons text-4xl text-blue-600">shopping_cart</span>
+          <h3 class="text-xl font-bold mt-3 mb-2">Point of Sale (POS)</h3>
+          <p class="text-gray-600">Omnichannel retail, inventory sync, real-time sales reporting, offline mode, and payment gateway integrations.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition card-hover" data-aos="zoom-in" data-aos-delay="250">
+          <span class="material-icons text-4xl text-blue-600">hub</span>
+          <h3 class="text-xl font-bold mt-3 mb-2">Enterprise Resource Planning</h3>
+          <p class="text-gray-600">Finance, procurement, CRM, inventory, manufacturing modules with dashboards & reporting suites.</p>
+        </div>
+        <div class="bg-gray-50 rounded-2xl p-6 border border-gray-200 hover:shadow-lg transition card-hover" data-aos="zoom-in" data-aos-delay="300">
+          <span class="material-icons text-4xl text-blue-600">cloud_queue</span>
+          <h3 class="text-xl font-bold mt-3 mb-2">Cloud Architecture</h3>
+          <p class="text-gray-600">Scalable AWS solutions: serverless, auto-scaling, IaC, cost optimization & high availability design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT & LET'S CONNECT with personal details: Douglas Rono, email, phone, location Nairobi -->
+  <section id="contact" class="py-20 bg-gradient-to-r from-blue-50 to-indigo-50">
+    <div class="max-w-5xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
+      <div data-aos="fade-up">
+        <span class="material-icons text-blue-600 text-5xl">contact_mail</span>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-3">Let’s <span class="gradient-text">Build Something Great</span></h2>
+        <p class="text-gray-600 max-w-xl mx-auto mt-3">Looking for a seasoned engineer to lead your next project? Let’s connect and create impact from Nairobi to the world.</p>
+        
+        <!-- Updated contact cards with real info -->
+        <div class="flex flex-wrap justify-center gap-5 mt-8">
+          <div class="flex items-center gap-2 bg-white rounded-full shadow-sm px-5 py-2.5 border border-gray-200 contact-card">
+            <span class="material-icons text-blue-500">email</span>
+            <span class="text-gray-700 font-medium">douglasronno@gmail.com</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white rounded-full shadow-sm px-5 py-2.5 border border-gray-200 contact-card">
+            <span class="material-icons text-blue-500">phone</span>
+            <span class="text-gray-700 font-medium">+254 110 666 140</span>
+          </div>
+          <div class="flex items-center gap-2 bg-white rounded-full shadow-sm px-5 py-2.5 border border-gray-200 contact-card">
+            <span class="material-icons text-blue-500">location_on</span>
+            <span class="text-gray-700 font-medium">Nairobi, Kenya</span>
+          </div>
+        </div>
+        
+        <!-- interactive mini form -->
+        <div class="mt-10 max-w-md mx-auto">
+          <div class="flex gap-3 items-stretch">
+            <input type="email" placeholder="Your email address" class="flex-1 px-5 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-400 outline-none bg-white">
+            <button class="bg-blue-700 hover:bg-blue-800 text-white font-semibold px-6 rounded-xl transition shadow flex items-center gap-1">
+              <span class="material-icons">send</span> Message
+            </button>
+          </div>
+          <p class="text-xs text-gray-500 mt-3">I'll reply within 24h — let's discuss your vision, stack, or collaboration.</p>
+        </div>
+        
+        <!-- social / additional links with location flavour -->
+        <div class="flex justify-center gap-8 mt-12 text-gray-500">
+          <span class="material-icons text-gray-400 hover:text-blue-600 transition cursor-pointer">alternate_email</span>
+          <span class="material-icons text-gray-400 hover:text-blue-600 transition cursor-pointer">link</span>
+          <span class="material-icons text-gray-400 hover:text-blue-600 transition cursor-pointer">github</span>
+          <span class="material-icons text-gray-400 hover:text-blue-600 transition cursor-pointer">linkedin</span>
+        </div>
+        <p class="text-sm text-gray-500 mt-6 flex items-center justify-center gap-1"><span class="material-icons text-blue-400 text-sm">public</span> Based in Nairobi, Kenya — remote & on-site worldwide</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER with personal copyright -->
+  <footer class="bg-white border-t border-gray-200 py-6 text-center text-gray-500 text-sm">
+    <div class="max-w-7xl mx-auto px-6">
+      © 2026 Douglas Rono — 7+ years of building enterprise-grade systems. From Nairobi with passion for code.
+    </div>
+  </footer>
+
+  <!-- AOS script and mobile toggle -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 20
+    });
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if(menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+    // smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+          if(mobileMenu && !mobileMenu.classList.contains('hidden')) mobileMenu.classList.add('hidden');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
